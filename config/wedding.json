@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Badarudheen & Shahla | Wedding Reception",
+    "description": "You are cordially invited to the wedding reception of Badarudheen.K and Shahla.VM on July 5, 2026",
+    "ogImage": "/images/og-cover.jpg"
+  },
+  "theme": {
+    "primaryColor": "#0F5132",
+    "goldColor": "#D4AF37",
+    "backgroundColor": "#FFFDF7"
+  },
+  "couple": {
+    "groom": {
+      "name": "Badarudheen.K",
+      "nameMalayalam": "ബദറുദ്ദീൻ.കെ",
+      "nameArabic": "بَدْرُ الدِّين",
+      "description": "Son of Abdurahiman K. (Kanniyan H) & Jameela K.",
+      "descriptionMalayalam": "അബ്ദുറഹിമാൻ.കെ (കണ്ണിയൻ.എച്ച്) & ജമീല.കെ. എന്നിവരുടെ പുത്രൻ",
+      "photo": "/images/groom.jpg"
+    },
+    "bride": {
+      "name": "Shahla.VM",
+      "nameMalayalam": "ഷഹ്‌ല.വി.എം",
+      "nameArabic": "شَهْلاء",
+      "description": "Daughter of Sulaiman V.M. (Vilakkumadathil H) & Vahida P. (Poothanari H)",
+      "descriptionMalayalam": "സുലൈമാൻ.വി.എം (വിളക്കുമടതിൽ.എച്ച്) & വഹീദ.പി (പൂതനാരി.എച്ച്) എന്നിവരുടെ പുത്രി",
+      "photo": "/images/bride.jpg"
+    }
+  },
+  "events": [
+    {
+      "id": "reception",
+      "title": "Wedding Reception",
+      "titleMalayalam": "വിവാഹ സ്വീകരണം",
+      "titleArabic": "وَلِيمَةُ الْعُرْس",
+      "date": "Sunday, 5 July 2026",
+      "dateMalayalam": "ഞായർ, ജൂലൈ 5, 2026",
+      "time": "5:00 PM",
+      "venue": "Safa Auditorium",
+      "venueMalayalam": "സഫ ഓഡിറ്റോറിയം",
+      "address": "Pulpatta, Malappuram, Kerala",
+      "addressMalayalam": "പുൽപ്പറ്റ, മലപ്പുറം, കേരള",
+      "icon": "celebration"
+    }
+  ],
+  "weddingDate": "2026-07-05T17:00:00",
+  "venue": {
+    "name": "Safa Auditorium",
+    "nameMalayalam": "സഫ ഓഡിറ്റോറിയം",
+    "address": "Pulpatta, Malappuram, Kerala",
+    "addressMalayalam": "പുൽപ്പറ്റ, മലപ്പുറം, കേരള",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.0!2d76.0800!3d11.1200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU2FmYSBBdWRpdG9yaXVtIFB1bHBhdHRh!5e0!3m2!1sen!2sin!4v1234567890",
+    "googleMapsUrl": "https://maps.google.com/?q=Safa+Auditorium+Pulpatta+Kerala",
+    "directionsUrl": "https://maps.google.com/dir/?api=1&destination=Safa+Auditorium+Pulpatta+Kerala"
+  },
+  "timeline": [
+    {
+      "id": "engagement",
+      "title": "Engagement",
+      "titleMalayalam": "നിശ്ചയതാംബൂലം",
+      "titleArabic": "الخطوبة",
+      "date": "2026",
+      "dateMalayalam": "2026",
+      "description": "The beautiful beginning of our journey together",
+      "descriptionMalayalam": "ഞങ്ങളുടെ യാത്രയുടെ മനോഹരമായ തുടക്കം",
+      "icon": "ring"
+    },
+    {
+      "id": "nikah",
+      "title": "Nikah Ceremony",
+      "titleMalayalam": "നിക്കാഹ് ചടങ്ങ്",
+      "titleArabic": "عقد النكاح",
+      "date": "July 5, 2026 – 11:00 AM",
+      "dateMalayalam": "ജൂലൈ 5, 2026 – 11:00 AM",
+      "description": "Sacred union blessed by Allah at Safa Auditorium, Pulpatta",
+      "descriptionMalayalam": "സഫ ഓഡിറ്റോറിയം, പുൽപ്പറ്റയിൽ അള്ളാഹുവിന്റെ അനുഗ്രഹത്തോടെ",
+      "icon": "mosque"
+    },
+    {
+      "id": "reception",
+      "title": "Wedding Reception",
+      "titleMalayalam": "വിവാഹ സ്വീകരണം",
+      "titleArabic": "وليمة العرس",
+      "date": "July 5, 2026 – 5:00 PM",
+      "dateMalayalam": "ജൂലൈ 5, 2026 – 5:00 PM",
+      "description": "Celebrate with family and friends at Safa Auditorium, Pulpatta",
+      "descriptionMalayalam": "കുടുംബവും സുഹൃത്തുക്കളും ചേർന്ന് ആഘോഷിക്കൂ",
+      "icon": "celebration"
+    }
+  ],
+  "family": {
+    "groom": {
+      "father": "Abdurahiman K. (Kanniyan H)",
+      "fatherMalayalam": "അബ്ദുറഹിമാൻ.കെ (കണ്ണിയൻ.എച്ച്)",
+      "mother": "Jameela K.",
+      "motherMalayalam": "ജമീല.കെ",
+      "siblings": "Son of Kanniyan House",
+      "siblingsMalayalam": "കണ്ണിയൻ വീട്ടിൽ"
+    },
+    "bride": {
+      "father": "Sulaiman V.M. (Vilakkumadathil H)",
+      "fatherMalayalam": "സുലൈമാൻ.വി.എം (വിളക്കുമടതിൽ.എച്ച്)",
+      "mother": "Vahida P. (Poothanari H)",
+      "motherMalayalam": "വഹീദ.പി (പൂതനാരി.എച്ച്)",
+      "siblings": "Daughter of Vilakkumadathil House",
+      "siblingsMalayalam": "വിളക്കുമടതിൽ വീട്ടിൽ"
+    }
+  },
+  "gallery": [
+    "/images/gallery/img1.jpg",
+    "/images/gallery/img2.jpg",
+    "/images/gallery/img3.jpg",
+    "/images/gallery/img4.jpg",
+    "/images/gallery/img5.jpg",
+    "/images/gallery/img6.jpg"
+  ],
+  "gift": {
+    "enabled": true,
+    "message": "Your Presence Is The Greatest Gift",
+    "messageMalayalam": "നിങ്ങളുടെ സാന്നിദ്ധ്യമാണ് ഏറ്റവും വലിയ സമ്മാനം",
+    "upiId": "example@upi",
+    "upiQR": "/images/upi-qr.png"
+  },
+  "contact": {
+    "phone": "+91 98765 43210",
+    "whatsapp": "919876543210",
+    "email": "wedding@example.com",
+    "instagram": "badarudheen_shahla_2026",
+    "facebook": "badarudheen.shahla"
+  },
+  "rsvp": {
+    "enabled": true,
+    "deadline": "June 28, 2026",
+    "deadlineMalayalam": "ജൂൺ 28, 2026"
+  },
+  "music": {
+    "enabled": true,
+    "autoPlay": false,
+    "src": "/audio/nasheed.mp3"
+  }
+}

@@ -1,26 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Poppins:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@300;400;500;600;700&family=Manjari:wght@100;400;700&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #3C1020;
+  --color-gold: #D4AF37;
+  --color-ivory: #FEF8F5;
+  --color-beige: #F2E4DB;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FEF8F5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-playfair  { font-family: 'Playfair Display', serif; }
+.font-poppins   { font-family: 'Poppins', sans-serif; }
+.font-amiri     { font-family: 'Amiri', serif; }
+.font-naskh     { font-family: 'Noto Naskh Arabic', serif; }
+.font-malayalam { font-family: 'Manjari', 'Noto Sans Malayalam', sans-serif; }
+
+@keyframes goldShine {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.gold-text-shine {
+  background: linear-gradient(90deg, #D4AF37 0%, #F5D76E 30%, #D4AF37 50%, #C5A028 70%, #D4AF37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShine 4s linear infinite;
+}
+
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-beige); }
+::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(212,175,55,0.7); }
+
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+
+input::placeholder,
+textarea::placeholder { color: rgba(255,253,247,0.35); }
+
+::selection { background: rgba(212,175,55,0.3); color: #3C1020; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
 }
