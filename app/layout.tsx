@@ -12,6 +12,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: weddingConfig.meta.title,
   description: weddingConfig.meta.description,
+  icons: {
+    icon: '/logo.jpeg',
+    apple: '/logo.jpeg',
+  },
   openGraph: {
     title: weddingConfig.meta.title,
     description: weddingConfig.meta.description,
