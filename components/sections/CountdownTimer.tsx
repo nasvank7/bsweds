@@ -27,21 +27,21 @@ function Digit({ value, label, ml }: { value: number; label: string; ml: boolean
         {/* Card body */}
         <div className="relative w-14 h-[4.5rem] md:w-20 md:h-24 lg:w-24 lg:h-28 rounded-xl md:rounded-2xl overflow-hidden"
           style={{
-            background: 'linear-gradient(165deg, #F8F0EC 0%, #EDE2DC 100%)',
-            border: '1px solid rgba(139,74,42,0.28)',
-            boxShadow: '0 12px 40px rgba(60,16,32,0.1), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(139,74,42,0.1)',
+            background: 'linear-gradient(165deg, #3C1020 0%, #2E0A14 100%)',
+            border: '1px solid rgba(212,175,55,0.18)',
+            boxShadow: '0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.3)',
           }}>
           {/* Top shine */}
           <div className="absolute top-0 left-0 right-0 h-1/2"
-            style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.55), transparent)' }} />
+            style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.06), transparent)' }} />
           {/* Center fold line */}
           <div className="absolute left-0 right-0 top-1/2 h-px"
-            style={{ background: 'rgba(139,74,42,0.18)', boxShadow: '0 1px 0 rgba(255,255,255,0.3)' }} />
+            style={{ background: 'rgba(0,0,0,0.4)', boxShadow: '0 1px 0 rgba(255,255,255,0.04)' }} />
 
           <AnimatePresence mode="wait">
             <motion.span key={display}
               className="absolute inset-0 flex items-center justify-center font-playfair font-bold text-3xl md:text-4xl lg:text-5xl"
-              style={{ color: '#3C1020', textShadow: '0 2px 10px rgba(60,16,32,0.12)' }}
+              style={{ color: '#D4AF37', textShadow: '0 2px 12px rgba(212,175,55,0.4)' }}
               initial={{ rotateX: flipping ? -90 : 0, opacity: flipping ? 0 : 1 }}
               animate={{ rotateX: 0, opacity: 1 }}
               exit={{ rotateX: 90, opacity: 0 }}
@@ -82,7 +82,7 @@ export default function CountdownTimer({ weddingDate }: Props) {
 
   return (
     <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #F5EDE8 0%, #FEF8F5 40%, #F5EDE8 100%)' }}>
+      style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #FFFDF7 40%, #FEF8F5 100%)' }}>
       {/* Floral tile pattern */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.04 }}>
         <defs>

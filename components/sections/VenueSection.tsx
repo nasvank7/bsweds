@@ -18,7 +18,7 @@ export default function VenueSection({ config }: Props) {
 
   return (
     <section id="venue" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #F2E4DB 0%, #FEF8F5 40%, #EFE2D8 100%)' }}>
+      style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #FFFDF7 40%, #FEF8F5 100%)' }}>
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
       <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
 

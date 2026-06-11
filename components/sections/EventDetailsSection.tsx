@@ -54,10 +54,10 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
       <div className="p-5 md:p-8 lg:p-10 h-full"
         style={{
           background: index === 0
-            ? 'linear-gradient(145deg, #F8F0EC 0%, #F2E8E3 60%, #EDE2DC 100%)'
-            : 'linear-gradient(145deg, #F5ECE8 0%, #EDE2DC 60%, #E8DDD8 100%)',
-          border: '1px solid rgba(139,74,42,0.18)',
-          boxShadow: '0 24px 64px rgba(60,16,32,0.1)',
+            ? 'linear-gradient(145deg, #3C1020 0%, #1C0810 60%, #100408 100%)'
+            : 'linear-gradient(145deg, #1a1030 0%, #110a22 60%, #0a0616 100%)',
+          border: '1px solid rgba(212,175,55,0.12)',
+          boxShadow: '0 24px 64px rgba(0,0,0,0.35)',
         }}>
         {/* Subtle inner pattern */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -76,12 +76,12 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
 
         {/* Title */}
         <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-5 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
-          style={{ color: '#3C1020' }}>
+          style={{ color: '#FEF8F5' }}>
           {title}
         </h3>
 
         {/* Divider */}
-        <div className="h-px mb-6" style={{ background: 'rgba(139,74,42,0.18)' }} />
+        <div className="h-px mb-6" style={{ background: 'rgba(212,175,55,0.15)' }} />
 
         {/* Details */}
         <div className="space-y-4">
@@ -106,7 +106,7 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
             <div key={i} className="flex items-start gap-3">
               <div className="mt-0.5 shrink-0">{item.icon}</div>
               <p className={`text-sm leading-relaxed ${ml ? 'font-malayalam' : 'font-poppins'}`}
-                style={{ color: i < 2 ? 'rgba(60,16,32,0.85)' : 'rgba(60,16,32,0.5)' }}>
+                style={{ color: i < 2 ? 'rgba(255,253,247,0.9)' : 'rgba(255,253,247,0.55)' }}>
                 {item.value}
               </p>
             </div>
@@ -123,7 +123,7 @@ export default function EventDetailsSection({ config }: Props) {
 
   return (
     <section id="events" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #F2E4DB 0%, #FEF8F5 40%, #F2E4DB 100%)' }}>
+      style={{ background: 'linear-gradient(180deg, #FFFDF7 0%, #FEF8F5 40%, #FFFDF7 100%)' }}>
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">

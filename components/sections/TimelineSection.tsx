@@ -52,7 +52,7 @@ function TimelineItem({ item, index, isLast }: { item: WeddingConfig['timeline']
         <div className="flex flex-col items-center">
           {index > 0 && <div className="w-0.5 h-6 -mt-6" style={{ background: 'linear-gradient(to bottom, rgba(212,175,55,0.6), rgba(212,175,55,0.3))' }} />}
           {index === 0 && <div className="h-0" />}
-          <motion.div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 relative z-10"
+          <motion.div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 relative z-10"
             style={{ background: 'linear-gradient(135deg, #D4AF37 0%, #E8CC6A 50%, #C5A028 100%)', boxShadow: '0 0 0 5px rgba(212,175,55,0.15), 0 0 0 10px rgba(212,175,55,0.06), 0 6px 24px rgba(212,175,55,0.35)' }}
             initial={{ scale: 0, rotate: -60 }} animate={inView ? { scale: 1, rotate: 0 } : {}} transition={{ duration: 0.55, delay: 0.1, type: 'spring', stiffness: 200 }}>
             {iconMap[item.icon] || iconMap.ring}
@@ -82,10 +82,10 @@ function TimelineItem({ item, index, isLast }: { item: WeddingConfig['timeline']
 
       {/* ─── MOBILE left-anchored layout ─── */}
       <div className="md:hidden flex gap-5 pb-10">
-        <div className="flex flex-col items-center flex-shrink-0">
+        <div className="flex flex-col items-center shrink-0">
           {index > 0 && <div className="w-0.5 h-4 -mt-4" style={{ background: 'rgba(212,175,55,0.4)' }} />}
           {index === 0 && <div className="h-0" />}
-          <motion.div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+          <motion.div className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
             style={{ background: 'linear-gradient(135deg, #D4AF37, #C5A028)', boxShadow: '0 0 0 4px rgba(212,175,55,0.12), 0 4px 16px rgba(212,175,55,0.3)' }}
             initial={{ scale: 0 }} animate={inView ? { scale: 1 } : {}} transition={{ duration: 0.5, type: 'spring' }}>
             {iconMap[item.icon] || iconMap.ring}
@@ -116,7 +116,7 @@ export default function TimelineSection({ config }: Props) {
 
   return (
     <section id="timeline" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, #FEF8F5 0%, #F5EDE8 50%, #FEF8F5 100%)' }}>
+      style={{ background: 'linear-gradient(160deg, #FEF8F5 0%, #FFFDF7 50%, #FEF8F5 100%)' }}>
 
       {/* Floral dot pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]"

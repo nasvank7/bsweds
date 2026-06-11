@@ -11,7 +11,7 @@ export default function QuranVerseSection() {
 
   return (
     <section id="quran" ref={ref} className="relative py-16 md:py-28 lg:py-36 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #F2E4DB 100%)' }}>
+      style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #FFFDF7 100%)' }}>
       {/* Background Islamic geometric */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.04 }}>
         <defs>

@@ -23,10 +23,10 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
       transition={{ duration: 0.9, delay }}
       className="relative overflow-hidden rounded-3xl flex flex-col items-center text-center px-5 py-8 md:px-8 md:py-10"
       style={{
-        background: 'rgba(255,255,255,0.75)',
+        background: 'rgba(255,255,255,0.05)',
         backdropFilter: 'blur(12px)',
-        border: '1px solid rgba(212,175,55,0.3)',
-        boxShadow: '0 8px 40px rgba(60,16,32,0.08), 0 1px 0 rgba(255,255,255,0.9) inset',
+        border: '1px solid rgba(212,175,55,0.22)',
+        boxShadow: '0 8px 40px rgba(0,0,0,0.35)',
       }}>
 
       {/* Floral corner ornaments */}
@@ -37,7 +37,7 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
         { style: { bottom: 0, right: 0, transform: 'scale(-1,-1)' } },
       ].map((c, i) => (
         <svg key={i} className="absolute w-20 h-20 pointer-events-none" viewBox="0 0 80 80" fill="none"
-          style={{ opacity: 0.22, ...c.style }}>
+          style={{ opacity: 0.35, ...c.style }}>
           <path d="M5 5 Q22 5 32 18 Q44 34 44 52" stroke="#D4AF37" strokeWidth="1.2" />
           <ellipse cx="28" cy="14" rx="10" ry="5.5" transform="rotate(-40 28 14)" fill="none" stroke="#D4878D" strokeWidth="0.9" />
           <ellipse cx="15" cy="32" rx="8" ry="4.5" transform="rotate(-70 15 32)" fill="none" stroke="#D4878D" strokeWidth="0.9" />
@@ -76,13 +76,13 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
       </p>
 
       {/* Arabic name */}
-      <p className="font-amiri text-2xl md:text-3xl mb-2" style={{ color: 'rgba(60,16,32,0.5)' }} dir="rtl">
+      <p className="font-amiri text-2xl md:text-3xl mb-2" style={{ color: 'rgba(232,180,184,0.6)' }} dir="rtl">
         {person.nameArabic}
       </p>
 
       {/* Floral divider */}
       <div className="flex items-center gap-2 my-3 w-full justify-center">
-        <div className="h-px flex-1 max-w-[60px]" style={{ background: 'rgba(212,175,55,0.35)' }} />
+        <div className="h-px flex-1 max-w-15" style={{ background: 'rgba(212,175,55,0.35)' }} />
         <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
           {[0,72,144,216,288].map((pa) => {
             const pr = (pa * Math.PI) / 180;
@@ -92,20 +92,21 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
           })}
           <circle cx="9" cy="6" r="1.8" fill="#D4AF37" opacity="0.8" />
         </svg>
-        <div className="h-px flex-1 max-w-[60px]" style={{ background: 'rgba(212,175,55,0.35)' }} />
+        <div className="h-px flex-1 max-w-15" style={{ background: 'rgba(212,175,55,0.35)' }} />
       </div>
 
       {/* Display name */}
       <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
-        style={{ color: '#3C1020' }}>
+        style={{ color: '#FFFDF7' }}>
         {displayName}
       </h3>
 
       {/* Description */}
-      <p className={`text-sm leading-relaxed max-w-[240px] ${ml ? 'font-malayalam' : 'font-poppins'}`}
-        style={{ color: 'rgba(60,16,32,0.55)' }}>
+      <p className={`text-sm leading-relaxed max-w-60 ${ml ? 'font-malayalam' : 'font-poppins'}`}
+        style={{ color: 'rgba(255,253,247,0.6)' }}>
         {displayDesc}
       </p>
+
     </motion.div>
   );
 }
@@ -116,14 +117,14 @@ export default function BrideGroomSection({ config }: Props) {
 
   return (
     <section id="couple" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #F5EDE8 50%, #FEF8F5 100%)' }}>
+      style={{ background: 'linear-gradient(175deg, #0A0306 0%, #1C0810 18%, #350F1C 50%, #4A1525 65%, #350F1C 80%, #0A0306 100%)' }}>
 
       {/* Floral background pattern */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.04 }}>
+      <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.05 }}>
         <defs>
           <pattern id="bgp" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
             <polygon points="50,5 61,35 93,35 67,55 77,85 50,65 23,85 33,55 7,35 39,35"
-              fill="none" stroke="#3C1020" strokeWidth="1" />
+              fill="none" stroke="#D4AF37" strokeWidth="1" />
             <circle cx="50" cy="50" r="10" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
           </pattern>
         </defs>
@@ -136,7 +137,7 @@ export default function BrideGroomSection({ config }: Props) {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div ref={ref}>
-          <SectionHeader label={t.couple.label} title={t.couple.title} />
+          <SectionHeader label={t.couple.label} title={t.couple.title} light={true} />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto relative">

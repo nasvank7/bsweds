@@ -10,6 +10,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: weddingConfig.meta.title,
   description: weddingConfig.meta.description,
   icons: {
@@ -19,14 +20,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: weddingConfig.meta.title,
     description: weddingConfig.meta.description,
-    images: [weddingConfig.meta.ogImage],
+    images: [{ url: '/logo.jpeg', width: 1066, height: 1600 }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: weddingConfig.meta.title,
     description: weddingConfig.meta.description,
-    images: [weddingConfig.meta.ogImage],
+    images: ['/logo.jpeg'],
   },
   manifest: '/manifest.json',
 };
