@@ -49,7 +49,7 @@ export default function Page() {
         <LanguageProvider>
           <ScrollProgress />
           <SideNavigation />
-          {config.music.enabled && <MusicPlayer src={config.music.src} />}
+          {/* {config.music.enabled && <MusicPlayer src={config.music.src} />} */}
           <main>
             <HeroSection config={config} />
             <QuranVerseSection />
