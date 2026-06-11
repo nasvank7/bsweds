@@ -10,7 +10,7 @@ export default function QuranVerseSection() {
   const ml = lang === 'ml';
 
   return (
-    <section id="quran" ref={ref} className="relative py-24 md:py-36 overflow-hidden"
+    <section id="quran" ref={ref} className="relative py-16 md:py-28 lg:py-36 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #F2E4DB 100%)' }}>
       {/* Background Islamic geometric */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.04 }}>
@@ -49,7 +49,7 @@ export default function QuranVerseSection() {
         {/* Arabic — large */}
         <motion.div className="relative mb-8"
           initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.35, duration: 0.8 }}>
-          <p className="font-amiri text-5xl md:text-6xl lg:text-7xl leading-loose" style={{ color: '#3C1020' }} dir="rtl">
+          <p className="font-amiri leading-loose" style={{ color: '#3C1020', fontSize: 'clamp(2rem, 9vw, 4.5rem)' }} dir="rtl">
             وَخَلَقْنَاكُمْ أَزْوَاجًا
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export default function QuranVerseSection() {
         </motion.div>
 
         {/* English translation */}
-        <motion.h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-4 italic ${ml ? 'font-malayalam not-italic' : 'font-playfair'}`}
+        <motion.h2 className={`text-lg md:text-2xl lg:text-4xl font-bold mb-4 italic leading-snug ${ml ? 'font-malayalam not-italic' : 'font-playfair'}`}
           style={{ color: '#1a1a1a' }}
           initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.65 }}>
           {t.quran.verse}

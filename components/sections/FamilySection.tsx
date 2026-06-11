@@ -41,7 +41,7 @@ function FamilyCard({ member, side, name, delay }: { member: FamilyMember; side:
       {/* Gold top stripe */}
       <div className="h-1.5" style={{ background: 'linear-gradient(90deg, #D4AF37, #E8CC6A, #D4AF37)' }} />
 
-      <div className="p-8"
+      <div className="p-5 md:p-8"
         style={{
           background: 'rgba(255,255,255,0.78)',
           backdropFilter: 'blur(12px)',
@@ -66,7 +66,7 @@ function FamilyCard({ member, side, name, delay }: { member: FamilyMember; side:
         </div>
 
         {/* Name */}
-        <h3 className={`text-2xl md:text-3xl font-bold mb-6 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+        <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-5 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
           style={{ color: '#3C1020' }}>
           {name}
         </h3>
@@ -109,7 +109,7 @@ export default function FamilySection({ config }: Props) {
   const brideName = ml ? (config.couple.bride.nameMalayalam || config.couple.bride.name) : config.couple.bride.name;
 
   return (
-    <section id="family" className="relative py-24 md:py-32 overflow-hidden"
+    <section id="family" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #F2E4DB 50%, #FEF8F5 100%)' }}>
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
       <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />

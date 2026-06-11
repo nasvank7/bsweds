@@ -53,7 +53,7 @@ export default function SideNavigation() {
     <>
       {/* ── Language toggle — top-right corner ── */}
       <motion.div
-        className="fixed top-5 right-5 z-50"
+        className="fixed top-3 right-3 md:top-5 md:right-5 z-50"
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}>
@@ -66,7 +66,7 @@ export default function SideNavigation() {
           }}>
           {(['en', 'ml'] as const).map(l => (
             <button key={l} onClick={() => setLang(l)}
-              className={`px-4 py-2 text-xs font-semibold transition-all ${l === 'ml' ? 'font-malayalam' : 'font-poppins uppercase tracking-wider'}`}
+              className={`px-3 py-1.5 md:px-4 md:py-2 text-xs font-semibold transition-all ${l === 'ml' ? 'font-malayalam' : 'font-poppins uppercase tracking-wider'}`}
               style={{
                 background: lang === l ? 'linear-gradient(135deg, #D4AF37, #C5A028)' : 'transparent',
                 color: lang === l ? '#3C1020' : 'rgba(60,16,32,0.4)',

@@ -29,9 +29,9 @@ export default function SectionHeader({ label, title, light = false }: SectionHe
   const ml = lang === 'ml';
 
   return (
-    <div ref={ref} className="flex flex-col items-center text-center mb-14 md:mb-20">
+    <div ref={ref} className="flex flex-col items-center text-center mb-10 md:mb-16 lg:mb-20">
       <motion.p
-        className={`text-xs tracking-[0.35em] uppercase mb-4 ${ml ? 'font-malayalam tracking-normal' : 'font-poppins'}`}
+        className={`text-xs tracking-[0.25em] md:tracking-[0.35em] uppercase mb-3 md:mb-4 ${ml ? 'font-malayalam tracking-normal' : 'font-poppins'}`}
         style={{ color: '#D4AF37' }}
         initial={{ opacity: 0, y: 10 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -41,7 +41,7 @@ export default function SectionHeader({ label, title, light = false }: SectionHe
       </motion.p>
 
       <motion.h2
-        className={`text-4xl md:text-5xl font-bold mb-6 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight ${ml ? 'font-malayalam' : 'font-playfair'}`}
         style={{ color: light ? '#FEF8F5' : '#3C1020' }}
         initial={{ opacity: 0, y: 16 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}

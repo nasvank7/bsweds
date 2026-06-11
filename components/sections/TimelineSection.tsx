@@ -115,7 +115,7 @@ export default function TimelineSection({ config }: Props) {
   const ml = lang === 'ml';
 
   return (
-    <section id="timeline" className="relative py-24 md:py-32 overflow-hidden"
+    <section id="timeline" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #FEF8F5 0%, #F5EDE8 50%, #FEF8F5 100%)' }}>
 
       {/* Floral dot pattern */}
@@ -132,7 +132,7 @@ export default function TimelineSection({ config }: Props) {
             initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}>
             {t.timeline.label}
           </motion.p>
-          <motion.h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+          <motion.h2 className={`text-2xl md:text-3xl lg:text-5xl font-bold mb-4 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
             style={{ color: '#3C1020' }}
             initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2 }}>
             {t.timeline.title}

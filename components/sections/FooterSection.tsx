@@ -74,12 +74,13 @@ export default function FooterSection({ config }: Props) {
         {/* Couple names */}
         <motion.div className="mb-3"
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.5 }}>
-          <h2 className={`text-3xl md:text-4xl font-bold ${ml ? 'font-malayalam' : 'font-playfair'}`}
-            style={{ color: '#FEF8F5' }}>
-            {groomName}
-            <span className="font-playfair mx-4" style={{ color: '#D4AF37' }}>&</span>
-            {brideName}
-          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-0">
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
+              style={{ color: '#FEF8F5' }}>{groomName}</h2>
+            <span className="font-playfair text-xl sm:text-2xl sm:mx-4 my-1 sm:my-0" style={{ color: '#D4AF37' }}>♥</span>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
+              style={{ color: '#FEF8F5' }}>{brideName}</h2>
+          </div>
         </motion.div>
 
         <motion.p className={`text-sm mb-12 ${fontClass}`}

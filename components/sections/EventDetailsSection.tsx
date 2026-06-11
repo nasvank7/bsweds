@@ -51,7 +51,7 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
       <div className="absolute top-0 left-0 right-0 h-2"
         style={{ background: 'linear-gradient(90deg, #D4AF37, #E8CC6A, #D4AF37)' }} />
 
-      <div className="p-8 md:p-10 h-full"
+      <div className="p-5 md:p-8 lg:p-10 h-full"
         style={{
           background: index === 0
             ? 'linear-gradient(145deg, #3C1020 0%, #1C0810 60%, #100408 100%)'
@@ -75,7 +75,7 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
         </p>
 
         {/* Title */}
-        <h3 className={`text-2xl md:text-3xl font-bold mb-6 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+        <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-5 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
           style={{ color: '#FEF8F5' }}>
           {title}
         </h3>
@@ -122,7 +122,7 @@ export default function EventDetailsSection({ config }: Props) {
   const { t } = useLanguage();
 
   return (
-    <section id="events" className="relative py-24 md:py-32 overflow-hidden"
+    <section id="events" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #F2E4DB 0%, #FEF8F5 40%, #F2E4DB 100%)' }}>
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
 

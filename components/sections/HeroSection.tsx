@@ -188,7 +188,7 @@ export default function HeroSection({ config }: Props) {
       <FloatingLanterns />
 
       {/* Content */}
-      <div className="relative flex flex-col items-center text-center px-6 pt-28 pb-24 max-w-2xl mx-auto" style={{ zIndex: 3 }}>
+      <div className="relative flex flex-col items-center text-center px-5 md:px-6 pt-24 pb-16 md:pt-32 md:pb-24 max-w-2xl mx-auto" style={{ zIndex: 3 }}>
 
         {/* Eyebrow */}
         <motion.div className="flex items-center gap-3 mb-7"
@@ -205,7 +205,7 @@ export default function HeroSection({ config }: Props) {
         <motion.div className="mb-3"
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.7 }}>
           <h1 className={`font-bold leading-none ${ml ? 'font-malayalam' : 'font-playfair'}`}
-            style={{ fontSize: 'clamp(2.6rem, 9vw, 5rem)', color: '#FFFDF7', textShadow: '0 4px 32px rgba(10,3,6,0.6)' }}>
+            style={{ fontSize: 'clamp(1.9rem, 8vw, 5rem)', color: '#FFFDF7', textShadow: '0 4px 32px rgba(10,3,6,0.6)' }}>
             {groomName}
           </h1>
           <p className="font-amiri text-xl mt-2" style={{ color: 'rgba(232,180,184,0.6)' }} dir="rtl">
@@ -240,7 +240,7 @@ export default function HeroSection({ config }: Props) {
         <motion.div className="mb-10"
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.05 }}>
           <h1 className={`font-bold leading-none ${ml ? 'font-malayalam' : 'font-playfair'}`}
-            style={{ fontSize: 'clamp(2.6rem, 9vw, 5rem)', color: '#FFFDF7', textShadow: '0 4px 32px rgba(10,3,6,0.6)' }}>
+            style={{ fontSize: 'clamp(1.9rem, 8vw, 5rem)', color: '#FFFDF7', textShadow: '0 4px 32px rgba(10,3,6,0.6)' }}>
             {brideName}
           </h1>
           <p className="font-amiri text-xl mt-2" style={{ color: 'rgba(232,180,184,0.6)' }} dir="rtl">

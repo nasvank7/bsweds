@@ -17,7 +17,7 @@ export default function VenueSection({ config }: Props) {
   const venueAddr = ml ? (venue.addressMalayalam || venue.address) : venue.address;
 
   return (
-    <section id="venue" className="relative py-24 md:py-32 overflow-hidden"
+    <section id="venue" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #F2E4DB 0%, #FEF8F5 40%, #EFE2D8 100%)' }}>
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
       <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37 30%, #D4AF37 70%, transparent)' }} />
@@ -47,7 +47,7 @@ export default function VenueSection({ config }: Props) {
             {/* Gold top strip */}
             <div className="h-1.5 w-full" style={{ background: 'linear-gradient(90deg, #D4AF37, #E8CC6A, #D4AF37)' }} />
 
-            <div className="p-8 md:p-10 h-full"
+            <div className="p-5 md:p-8 lg:p-10 h-full"
               style={{
                 background: 'rgba(255,255,255,0.78)',
                 backdropFilter: 'blur(12px)',
@@ -67,7 +67,7 @@ export default function VenueSection({ config }: Props) {
               </div>
 
               {/* Name */}
-              <h3 className={`text-2xl md:text-3xl font-bold mb-3 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+              <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
                 style={{ color: '#3C1020' }}>
                 {venueName}
               </h3>

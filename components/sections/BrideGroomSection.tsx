@@ -21,7 +21,7 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
     <motion.div ref={ref}
       initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.9, delay }}
-      className="relative overflow-hidden rounded-3xl flex flex-col items-center text-center px-8 py-10"
+      className="relative overflow-hidden rounded-3xl flex flex-col items-center text-center px-5 py-8 md:px-8 md:py-10"
       style={{
         background: 'rgba(255,255,255,0.75)',
         backdropFilter: 'blur(12px)',
@@ -76,7 +76,7 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
       </p>
 
       {/* Arabic name */}
-      <p className="font-amiri text-3xl mb-2" style={{ color: 'rgba(60,16,32,0.5)' }} dir="rtl">
+      <p className="font-amiri text-2xl md:text-3xl mb-2" style={{ color: 'rgba(60,16,32,0.5)' }} dir="rtl">
         {person.nameArabic}
       </p>
 
@@ -96,7 +96,7 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
       </div>
 
       {/* Display name */}
-      <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+      <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
         style={{ color: '#3C1020' }}>
         {displayName}
       </h3>
@@ -115,7 +115,7 @@ export default function BrideGroomSection({ config }: Props) {
   const { t } = useLanguage();
 
   return (
-    <section id="couple" className="relative py-24 md:py-32 overflow-hidden"
+    <section id="couple" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #FEF8F5 0%, #F5EDE8 50%, #FEF8F5 100%)' }}>
 
       {/* Floral background pattern */}

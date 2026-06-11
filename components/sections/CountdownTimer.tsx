@@ -25,7 +25,7 @@ function Digit({ value, label, ml }: { value: number; label: string; ml: boolean
     <div className="flex flex-col items-center gap-3">
       <div className="relative" style={{ perspective: '400px' }}>
         {/* Card body */}
-        <div className="relative w-16 h-20 md:w-24 md:h-28 rounded-2xl overflow-hidden"
+        <div className="relative w-14 h-[4.5rem] md:w-20 md:h-24 lg:w-24 lg:h-28 rounded-xl md:rounded-2xl overflow-hidden"
           style={{
             background: 'linear-gradient(165deg, #3C1020 0%, #2E0A14 100%)',
             border: '1px solid rgba(212,175,55,0.3)',
@@ -40,7 +40,7 @@ function Digit({ value, label, ml }: { value: number; label: string; ml: boolean
 
           <AnimatePresence mode="wait">
             <motion.span key={display}
-              className="absolute inset-0 flex items-center justify-center font-playfair font-bold text-4xl md:text-5xl"
+              className="absolute inset-0 flex items-center justify-center font-playfair font-bold text-3xl md:text-4xl lg:text-5xl"
               style={{ color: '#D4AF37', textShadow: '0 2px 12px rgba(212,175,55,0.4)' }}
               initial={{ rotateX: flipping ? -90 : 0, opacity: flipping ? 0 : 1 }}
               animate={{ rotateX: 0, opacity: 1 }}
@@ -81,7 +81,7 @@ export default function CountdownTimer({ weddingDate }: Props) {
   if (!mounted) return null;
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden"
+    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #F5EDE8 0%, #FEF8F5 40%, #F5EDE8 100%)' }}>
       {/* Floral tile pattern */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.04 }}>
@@ -104,7 +104,7 @@ export default function CountdownTimer({ weddingDate }: Props) {
           {t.countdown.label}
         </motion.p>
 
-        <motion.h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-3 ${ml ? 'font-malayalam' : 'font-playfair'}`}
+        <motion.h2 className={`text-2xl md:text-3xl lg:text-5xl font-bold mb-3 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
           style={{ color: '#3C1020' }}
           initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.15 }}>
           {passed ? t.countdown.passed : t.countdown.title}
@@ -123,7 +123,7 @@ export default function CountdownTimer({ weddingDate }: Props) {
         </motion.div>
 
         {/* Timer digits */}
-        <motion.div className="flex items-center justify-center gap-2 md:gap-4"
+        <motion.div className="flex items-center justify-center gap-1.5 md:gap-3 lg:gap-4"
           initial={{ opacity: 0, scale: 0.9 }} animate={inView ? { opacity: 1, scale: 1 } : {}} transition={{ delay: 0.4, duration: 0.6 }}>
           <Digit value={time.days} label={t.countdown.days} ml={ml} />
           <div className="flex flex-col gap-2 mb-8">
