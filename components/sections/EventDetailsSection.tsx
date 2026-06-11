@@ -54,10 +54,10 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
       <div className="p-5 md:p-8 lg:p-10 h-full"
         style={{
           background: index === 0
-            ? 'linear-gradient(145deg, #3C1020 0%, #1C0810 60%, #100408 100%)'
-            : 'linear-gradient(145deg, #1a1030 0%, #110a22 60%, #0a0616 100%)',
-          border: '1px solid rgba(212,175,55,0.2)',
-          boxShadow: '0 24px 64px rgba(0,0,0,0.3)',
+            ? 'linear-gradient(145deg, #F8F0EC 0%, #F2E8E3 60%, #EDE2DC 100%)'
+            : 'linear-gradient(145deg, #F5ECE8 0%, #EDE2DC 60%, #E8DDD8 100%)',
+          border: '1px solid rgba(139,74,42,0.18)',
+          boxShadow: '0 24px 64px rgba(60,16,32,0.1)',
         }}>
         {/* Subtle inner pattern */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -75,13 +75,13 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
         </p>
 
         {/* Title */}
-        <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-5 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
-          style={{ color: '#FEF8F5' }}>
+        <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-5 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
+          style={{ color: '#3C1020' }}>
           {title}
         </h3>
 
         {/* Divider */}
-        <div className="h-px mb-6" style={{ background: 'rgba(212,175,55,0.15)' }} />
+        <div className="h-px mb-6" style={{ background: 'rgba(139,74,42,0.18)' }} />
 
         {/* Details */}
         <div className="space-y-4">
@@ -104,9 +104,9 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
             },
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-3">
-              <div className="mt-0.5 flex-shrink-0">{item.icon}</div>
+              <div className="mt-0.5 shrink-0">{item.icon}</div>
               <p className={`text-sm leading-relaxed ${ml ? 'font-malayalam' : 'font-poppins'}`}
-                style={{ color: i < 2 ? 'rgba(255,253,247,0.9)' : 'rgba(255,253,247,0.55)' }}>
+                style={{ color: i < 2 ? 'rgba(60,16,32,0.85)' : 'rgba(60,16,32,0.5)' }}>
                 {item.value}
               </p>
             </div>

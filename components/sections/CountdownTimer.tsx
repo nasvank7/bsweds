@@ -27,21 +27,21 @@ function Digit({ value, label, ml }: { value: number; label: string; ml: boolean
         {/* Card body */}
         <div className="relative w-14 h-[4.5rem] md:w-20 md:h-24 lg:w-24 lg:h-28 rounded-xl md:rounded-2xl overflow-hidden"
           style={{
-            background: 'linear-gradient(165deg, #3C1020 0%, #2E0A14 100%)',
-            border: '1px solid rgba(212,175,55,0.3)',
-            boxShadow: '0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(212,175,55,0.15), inset 0 -1px 0 rgba(0,0,0,0.3)',
+            background: 'linear-gradient(165deg, #F8F0EC 0%, #EDE2DC 100%)',
+            border: '1px solid rgba(139,74,42,0.28)',
+            boxShadow: '0 12px 40px rgba(60,16,32,0.1), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(139,74,42,0.1)',
           }}>
           {/* Top shine */}
           <div className="absolute top-0 left-0 right-0 h-1/2"
-            style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.06), transparent)' }} />
+            style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.55), transparent)' }} />
           {/* Center fold line */}
           <div className="absolute left-0 right-0 top-1/2 h-px"
-            style={{ background: 'rgba(0,0,0,0.4)', boxShadow: '0 1px 0 rgba(255,255,255,0.03)' }} />
+            style={{ background: 'rgba(139,74,42,0.18)', boxShadow: '0 1px 0 rgba(255,255,255,0.3)' }} />
 
           <AnimatePresence mode="wait">
             <motion.span key={display}
               className="absolute inset-0 flex items-center justify-center font-playfair font-bold text-3xl md:text-4xl lg:text-5xl"
-              style={{ color: '#D4AF37', textShadow: '0 2px 12px rgba(212,175,55,0.4)' }}
+              style={{ color: '#3C1020', textShadow: '0 2px 10px rgba(60,16,32,0.12)' }}
               initial={{ rotateX: flipping ? -90 : 0, opacity: flipping ? 0 : 1 }}
               animate={{ rotateX: 0, opacity: 1 }}
               exit={{ rotateX: 90, opacity: 0 }}
@@ -104,7 +104,7 @@ export default function CountdownTimer({ weddingDate }: Props) {
           {t.countdown.label}
         </motion.p>
 
-        <motion.h2 className={`text-2xl md:text-3xl lg:text-5xl font-bold mb-3 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
+        <motion.h2 className={`text-3xl md:text-4xl lg:text-6xl font-bold mb-3 leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
           style={{ color: '#3C1020' }}
           initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.15 }}>
           {passed ? t.countdown.passed : t.countdown.title}

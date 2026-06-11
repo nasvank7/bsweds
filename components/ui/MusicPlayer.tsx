@@ -39,7 +39,7 @@ export default function MusicPlayer({ src }: MusicPlayerProps) {
       <motion.button
         onClick={() => setPlaying(!playing)}
         className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center shadow-2xl"
-        style={{ background: 'linear-gradient(135deg, #0F5132, #1a7a4c)' }}
+        style={{ background: 'linear-gradient(135deg, #8B4A2A, #7A3040)' }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label={playing ? 'Mute music' : 'Play music'}

@@ -42,11 +42,11 @@ export default function WishesSection() {
     setTimeout(() => setSubmitted(false), 3000);
   };
 
-  const inputStyle = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(212,175,55,0.2)', color: '#FFFDF7' };
+  const inputStyle = { background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(139,74,42,0.2)', color: '#3C1020' };
 
   return (
     <section id="wishes" className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, #FFFDF7, #F7F2E7)' }}>
+      style={{ background: 'linear-gradient(160deg, #F8F0EC, #F2E8E3)' }}>
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #D4AF37, transparent)' }} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
@@ -56,7 +56,7 @@ export default function WishesSection() {
             {t.wishes.label}
           </motion.p>
           <motion.h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${ml ? 'font-malayalam' : 'font-playfair'}`}
-            style={{ color: '#0F5132' }} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2 }}>
+            style={{ color: '#3C1020' }} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2 }}>
             {t.wishes.title}
           </motion.h2>
           <motion.div className="h-0.5 w-24 mx-auto" style={{ background: 'linear-gradient(to right, transparent, #D4AF37, transparent)' }}
@@ -67,9 +67,9 @@ export default function WishesSection() {
           {/* Form */}
           <motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.4 }}>
             <form onSubmit={handleSubmit} className="rounded-3xl p-6 space-y-4"
-              style={{ background: 'linear-gradient(145deg, #0F5132, #133d26)', border: '1px solid rgba(212,175,55,0.3)', boxShadow: '0 20px 60px rgba(15,81,50,0.2)' }}>
+              style={{ background: 'rgba(255,255,255,0.55)', border: '1px solid rgba(139,74,42,0.18)', boxShadow: '0 20px 60px rgba(60,16,32,0.08)' }}>
               <div>
-                <label className={`block text-xs tracking-wider uppercase mb-2 ${fontClass}`} style={{ color: 'rgba(212,175,55,0.7)' }}>{t.wishes.nameLabel}</label>
+                <label className={`block text-xs tracking-wider uppercase mb-2 ${fontClass}`} style={{ color: 'rgba(139,74,42,0.75)' }}>{t.wishes.nameLabel}</label>
                 <input type="text" value={name}
                   onChange={(e) => { setName(e.target.value); if (errors.name) setErrors((er) => ({ ...er, name: undefined })); }}
                   placeholder={t.wishes.namePlaceholder}
@@ -77,7 +77,7 @@ export default function WishesSection() {
                 {errors.name && <p className={`text-red-400 text-xs mt-1 ${fontClass}`}>{errors.name}</p>}
               </div>
               <div>
-                <label className={`block text-xs tracking-wider uppercase mb-2 ${fontClass}`} style={{ color: 'rgba(212,175,55,0.7)' }}>{t.wishes.messageLabel}</label>
+                <label className={`block text-xs tracking-wider uppercase mb-2 ${fontClass}`} style={{ color: 'rgba(139,74,42,0.75)' }}>{t.wishes.messageLabel}</label>
                 <textarea rows={4} value={message}
                   onChange={(e) => { setMessage(e.target.value); if (errors.message) setErrors((er) => ({ ...er, message: undefined })); }}
                   placeholder={t.wishes.messagePlaceholder}
@@ -95,7 +95,7 @@ export default function WishesSection() {
                 ) : (
                   <motion.button key="submit" type="submit"
                     className={`w-full py-3.5 rounded-full text-sm font-bold ${ml ? 'font-malayalam' : 'font-poppins tracking-widest uppercase'}`}
-                    style={{ background: 'linear-gradient(135deg, #D4AF37, #C5A028)', color: '#0F5132' }}
+                    style={{ background: 'linear-gradient(135deg, #8B4A2A, #7A3040)', color: '#FEF8F5' }}
                     whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     {t.wishes.submit}
                   </motion.button>
@@ -121,10 +121,10 @@ export default function WishesSection() {
                     initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
-                        style={{ background: 'linear-gradient(135deg, #0F5132, #1a6b42)', color: '#D4AF37' }}>
+                        style={{ background: 'linear-gradient(135deg, #8B4A2A, #7A3040)', color: '#FEF8F5' }}>
                         {wish.name.charAt(0).toUpperCase()}
                       </div>
-                      <p className={`text-sm font-semibold ${fontClass}`} style={{ color: '#0F5132' }}>{wish.name}</p>
+                      <p className={`text-sm font-semibold ${fontClass}`} style={{ color: '#3C1020' }}>{wish.name}</p>
                     </div>
                     <p className={`text-sm leading-relaxed ${fontClass}`} style={{ color: '#4b5563' }}>{wish.message}</p>
                     <p className="font-poppins text-xs mt-2" style={{ color: '#d1d5db' }}>

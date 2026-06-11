@@ -19,7 +19,7 @@ export default function GiftSection({ config }: Props) {
 
   return (
     <section id="gift" className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, #0a3d24, #0F5132)' }}>
+      style={{ background: 'linear-gradient(160deg, #F8F0EC, #F2E8E3)' }}>
       <div className="absolute inset-0 pointer-events-none opacity-5"
         style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
@@ -37,12 +37,12 @@ export default function GiftSection({ config }: Props) {
         </motion.div>
 
         <motion.h2 className={`text-3xl md:text-4xl font-bold mb-4 ${ml ? 'font-malayalam' : 'font-playfair'}`}
-          style={{ color: '#FFFDF7' }} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2 }}>
+          style={{ color: '#3C1020' }} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2 }}>
           {message}
         </motion.h2>
 
         <motion.p className={`text-sm mb-10 ${ml ? 'font-malayalam' : 'font-poppins'}`}
-          style={{ color: 'rgba(255,253,247,0.6)' }} initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.3 }}>
+          style={{ color: 'rgba(60,16,32,0.55)' }} initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.3 }}>
           {t.gift.subtext}
         </motion.p>
 
@@ -53,21 +53,21 @@ export default function GiftSection({ config }: Props) {
           <div className="relative w-40 h-40 mx-auto mb-3">
             <div className="absolute inset-0 flex items-center justify-center rounded-xl" style={{ background: '#f3f4f6' }}>
               <svg width="80" height="80" viewBox="0 0 80 80">
-                <rect x="5" y="5" width="30" height="30" fill="none" stroke="#0F5132" strokeWidth="3"/>
-                <rect x="12" y="12" width="16" height="16" fill="#0F5132"/>
-                <rect x="45" y="5" width="30" height="30" fill="none" stroke="#0F5132" strokeWidth="3"/>
-                <rect x="52" y="12" width="16" height="16" fill="#0F5132"/>
-                <rect x="5" y="45" width="30" height="30" fill="none" stroke="#0F5132" strokeWidth="3"/>
-                <rect x="12" y="52" width="16" height="16" fill="#0F5132"/>
-                <rect x="45" y="45" width="8" height="8" fill="#0F5132"/>
-                <rect x="57" y="45" width="8" height="8" fill="#0F5132"/>
-                <rect x="45" y="57" width="8" height="8" fill="#0F5132"/>
-                <rect x="57" y="57" width="8" height="8" fill="#0F5132"/>
+                <rect x="5" y="5" width="30" height="30" fill="none" stroke="#3C1020" strokeWidth="3"/>
+                <rect x="12" y="12" width="16" height="16" fill="#3C1020"/>
+                <rect x="45" y="5" width="30" height="30" fill="none" stroke="#3C1020" strokeWidth="3"/>
+                <rect x="52" y="12" width="16" height="16" fill="#3C1020"/>
+                <rect x="5" y="45" width="30" height="30" fill="none" stroke="#3C1020" strokeWidth="3"/>
+                <rect x="12" y="52" width="16" height="16" fill="#3C1020"/>
+                <rect x="45" y="45" width="8" height="8" fill="#3C1020"/>
+                <rect x="57" y="45" width="8" height="8" fill="#3C1020"/>
+                <rect x="45" y="57" width="8" height="8" fill="#3C1020"/>
+                <rect x="57" y="57" width="8" height="8" fill="#3C1020"/>
               </svg>
             </div>
             <Image src={gift.upiQR} alt="UPI QR" fill className="object-contain rounded-xl" />
           </div>
-          <p className="font-poppins text-sm font-semibold text-center" style={{ color: '#0F5132' }}>
+          <p className="font-poppins text-sm font-semibold text-center" style={{ color: '#3C1020' }}>
             {t.gift.upiLabel}: {gift.upiId}
           </p>
         </motion.div>

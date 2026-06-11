@@ -50,8 +50,8 @@
     "address": "Pulpatta, Malappuram, Kerala",
     "addressMalayalam": "പുൽപ്പറ്റ, മലപ്പുറം, കേരള",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.0!2d76.0800!3d11.1200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU2FmYSBBdWRpdG9yaXVtIFB1bHBhdHRh!5e0!3m2!1sen!2sin!4v1234567890",
-    "googleMapsUrl": "https://maps.google.com/?q=Safa+Auditorium+Pulpatta+Kerala",
-    "directionsUrl": "https://maps.google.com/dir/?api=1&destination=Safa+Auditorium+Pulpatta+Kerala"
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Safa+Auditorium+Pulpatta+Malappuram+Kerala",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Safa+Auditorium,+Pulpatta,+Malappuram,+Kerala"
   },
   "timeline": [
     {
@@ -59,8 +59,8 @@
       "title": "Engagement",
       "titleMalayalam": "നിശ്ചയതാംബൂലം",
       "titleArabic": "الخطوبة",
-      "date": "2026",
-      "dateMalayalam": "2026",
+      "date": "2025",
+      "dateMalayalam": "2025",
       "description": "The beautiful beginning of our journey together",
       "descriptionMalayalam": "ഞങ്ങളുടെ യാത്രയുടെ മനോഹരമായ തുടക്കം",
       "icon": "ring"
@@ -70,10 +70,10 @@
       "title": "Nikah Ceremony",
       "titleMalayalam": "നിക്കാഹ് ചടങ്ങ്",
       "titleArabic": "عقد النكاح",
-      "date": "July 5, 2026 – 11:00 AM",
-      "dateMalayalam": "ജൂലൈ 5, 2026 – 11:00 AM",
-      "description": "Sacred union blessed by Allah at Safa Auditorium, Pulpatta",
-      "descriptionMalayalam": "സഫ ഓഡിറ്റോറിയം, പുൽപ്പറ്റയിൽ അള്ളാഹുവിന്റെ അനുഗ്രഹത്തോടെ",
+      "date": "July 13, 2025",
+      "dateMalayalam": "ജൂലൈ 13, 2025",
+      "description": "Our blessed Nikah was solemnized on July 13, 2025, Alhamdulillah",
+      "descriptionMalayalam": "ഞങ്ങളുടെ നിക്കാഹ് 2025 ജൂലൈ 13-ന് നടന്നു, അൽഹംദുലില്ലാഹ്",
       "icon": "mosque"
     },
     {

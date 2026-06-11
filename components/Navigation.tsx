@@ -38,10 +38,10 @@ export default function Navigation() {
         transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
         <div className="w-full max-w-5xl rounded-2xl transition-all duration-500"
           style={{
-            background: scrolled ? 'rgba(60,16,32,0.97)' : 'rgba(60,16,32,0.68)',
+            background: scrolled ? 'rgba(248,240,236,0.97)' : 'rgba(248,240,236,0.82)',
             backdropFilter: 'blur(24px)',
-            border: '1px solid rgba(212,175,55,0.22)',
-            boxShadow: scrolled ? '0 12px 48px rgba(0,0,0,0.4), inset 0 1px 0 rgba(212,175,55,0.12)' : '0 4px 24px rgba(0,0,0,0.25)',
+            border: '1px solid rgba(139,74,42,0.2)',
+            boxShadow: scrolled ? '0 12px 48px rgba(60,16,32,0.12), inset 0 1px 0 rgba(255,255,255,0.6)' : '0 4px 24px rgba(60,16,32,0.08)',
           }}>
           <div className="flex items-center justify-between px-5 md:px-8 py-3.5">
             {/* Logo */}
@@ -67,7 +67,7 @@ export default function Navigation() {
               {navLinks.map((link, i) => (
                 <button key={link.href} onClick={() => scrollTo(link.href)}
                   className={`relative px-4 py-2 rounded-xl text-xs font-medium transition-colors duration-200 group ${ml ? 'font-malayalam' : 'font-poppins tracking-wider uppercase'}`}
-                  style={{ color: 'rgba(255,253,247,0.75)' }}>
+                  style={{ color: 'rgba(60,16,32,0.72)' }}>
                   <span className="relative z-10 group-hover:text-[#D4AF37] transition-colors duration-200" style={{ display: 'block' }}>
                     {i === 2 ? (
                       <span className="flex items-center gap-1">
@@ -121,10 +121,10 @@ export default function Navigation() {
         {menuOpen && (
           <motion.div className="fixed inset-0 z-40 md:hidden"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <div className="absolute inset-0" style={{ background: 'rgba(10,3,6,0.9)', backdropFilter: 'blur(12px)' }}
+            <div className="absolute inset-0" style={{ background: 'rgba(60,16,32,0.5)', backdropFilter: 'blur(12px)' }}
               onClick={() => setMenuOpen(false)} />
             <motion.div className="absolute top-24 left-4 right-4 rounded-3xl overflow-hidden"
-              style={{ background: 'rgba(60,16,32,0.98)', border: '1px solid rgba(212,175,55,0.25)' }}
+              style={{ background: 'rgba(248,240,236,0.98)', border: '1px solid rgba(139,74,42,0.22)' }}
               initial={{ opacity: 0, scale: 0.95, y: -20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
@@ -134,13 +134,13 @@ export default function Navigation() {
                 {navLinks.map((link, i) => (
                   <motion.button key={link.href} onClick={() => scrollTo(link.href)}
                     className={`w-full text-left px-5 py-4 rounded-2xl flex items-center gap-3 ${ml ? 'font-malayalam text-base' : 'font-poppins text-sm tracking-wider uppercase'}`}
-                    style={{ color: 'rgba(255,253,247,0.85)' }}
+                    style={{ color: 'rgba(60,16,32,0.82)' }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                     whileTap={{ scale: 0.98 }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(212,175,55,0.08)'; e.currentTarget.style.color = '#D4AF37'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(255,253,247,0.85)'; }}>
+                    onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(60,16,32,0.82)'; }}>
                     <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#D4AF37', flexShrink: 0 }} />
                     {link.label}
                   </motion.button>

@@ -41,7 +41,7 @@ export default function SectionHeader({ label, title, light = false }: SectionHe
       </motion.p>
 
       <motion.h2
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight ${ml ? 'font-malayalam' : 'font-playfair'}`}
+        className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight ${ml ? 'font-malayalam' : 'font-playfair'}`}
         style={{ color: light ? '#FEF8F5' : '#3C1020' }}
         initial={{ opacity: 0, y: 16 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
