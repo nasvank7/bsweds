@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/LanguageContext';
+import { isBrideSide } from '@/lib/perspective';
+import weddingConfig from '@/config/wedding.json';
 
 interface Props { onOpen: () => void }
 
@@ -24,6 +26,11 @@ const STARS = [
 export default function SplashScreen({ onOpen }: Props) {
   const { t, lang } = useLanguage();
   const ml = lang === 'ml';
+
+  const groomName    = ml ? (weddingConfig.couple.groom.nameMalayalam || weddingConfig.couple.groom.name) : weddingConfig.couple.groom.name;
+  const brideName    = ml ? (weddingConfig.couple.bride.nameMalayalam || weddingConfig.couple.bride.name) : weddingConfig.couple.bride.name;
+  const primaryName  = isBrideSide ? brideName : groomName;
+  const secondaryName = isBrideSide ? groomName : brideName;
 
   useEffect(() => {
     const id = setTimeout(onOpen, 4600);
@@ -259,7 +266,7 @@ export default function SplashScreen({ onOpen }: Props) {
           style={{ fontSize: 'clamp(2rem, 8vw, 3.4rem)', color: '#3C1020', lineHeight: 1.15 }}
           initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6, duration: 0.7 }}>
-          {lang === 'ml' ? 'ബദറുദ്ദീൻ' : 'Badarudheen'}
+          {primaryName}
         </motion.p>
 
         {/* Heart divider */}
@@ -277,7 +284,7 @@ export default function SplashScreen({ onOpen }: Props) {
           style={{ fontSize: 'clamp(2rem, 8vw, 3.4rem)', color: '#3C1020', lineHeight: 1.15 }}
           initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.92, duration: 0.7 }}>
-          {lang === 'ml' ? 'ഷഹ്‌ല' : 'Shahla'}
+          {secondaryName}
         </motion.p>
 
         {/* Date */}
