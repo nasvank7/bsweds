@@ -27,9 +27,11 @@ const PARTICLES = [
 
 export default function HeroSection({ config }: Props) {
   const { t: tr, lang: l } = useLanguage();
-  const { couple, events, venue } = config;
+  const { couple } = config;
   const ml = l === 'ml';
-  const reception = events.find((e) => e.id === 'reception');
+  const activeEvents = (isBrideSide && config.eventsBride) ? config.eventsBride : config.events;
+  const venue = (isBrideSide && config.venueBride) ? config.venueBride : config.venue;
+  const reception = activeEvents.find((e) => e.id === 'reception');
 
   const groomName = ml ? (couple.groom.nameMalayalam || couple.groom.name) : couple.groom.name;
   const brideName = ml ? (couple.bride.nameMalayalam || couple.bride.name) : couple.bride.name;

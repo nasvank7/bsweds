@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { WeddingConfig } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
 import SectionHeader from '../ui/SectionHeader';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -118,8 +119,9 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
 }
 
 export default function EventDetailsSection({ config }: Props) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
+  const [ref] = useInView({ triggerOnce: true, threshold: 0.05 });
   const { t } = useLanguage();
+  const activeEvents = (isBrideSide && config.eventsBride) ? config.eventsBride : config.events;
 
   return (
     <section id="events" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
@@ -129,8 +131,8 @@ export default function EventDetailsSection({ config }: Props) {
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div ref={ref}><SectionHeader label={t.events.label} title={t.events.title} /></div>
 
-        <div className={config.events.length === 1 ? 'max-w-xl mx-auto' : 'grid md:grid-cols-2 gap-6 md:gap-8'}>
-          {config.events.map((event, i) => (
+        <div className={activeEvents.length === 1 ? 'max-w-xl mx-auto' : 'grid md:grid-cols-2 gap-6 md:gap-8'}>
+          {activeEvents.map((event, i) => (
             <EventCard key={event.id} event={event} index={i} />
           ))}
         </div>

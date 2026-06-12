@@ -40,10 +40,28 @@
       "venueMalayalam": "സഫ ഓഡിറ്റോറിയം",
       "address": "Pulpatta, Malappuram, Kerala",
       "addressMalayalam": "പുൽപ്പറ്റ, മലപ്പുറം, കേരള",
+
+      "icon": "celebration"
+    }
+  ],
+  "eventsBride": [
+    {
+      "id": "reception",
+      "title": "Wedding Reception",
+      "titleMalayalam": "വിവാഹ സ്വീകരണം",
+      "titleArabic": "وَلِيمَةُ الْعُرْس",
+      "date": "Sunday, 5 July 2026",
+      "dateMalayalam": "ഞായർ, ജൂലൈ 5, 2026",
+      "time": "11:00 AM",
+      "venue": "Jayasree Auditorium",
+      "venueMalayalam": "ജയശ്രീ ഓഡിറ്റോറിയം",
+      "address": "Manjeri, Malappuram, Kerala",
+      "addressMalayalam": "മഞ്ചേരി, മലപ്പുറം, കേരള",
       "icon": "celebration"
     }
   ],
   "weddingDate": "2026-07-05T17:00:00",
+  "weddingDateBride": "2026-07-05T11:00:00",
   "venue": {
     "name": "Safa Auditorium",
     "nameMalayalam": "സഫ ഓഡിറ്റോറിയം",
@@ -52,6 +70,15 @@
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.0!2d76.0800!3d11.1200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU2FmYSBBdWRpdG9yaXVtIFB1bHBhdHRh!5e0!3m2!1sen!2sin!4v1234567890",
     "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Safa+Auditorium+Pulpatta+Malappuram+Kerala",
     "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Safa+Auditorium,+Pulpatta,+Malappuram,+Kerala"
+  },
+  "venueBride": {
+    "name": "Jayasree Auditorium",
+    "nameMalayalam": "ജയശ്രീ ഓഡിറ്റോറിയം",
+    "address": "Manjeri, Malappuram, Kerala",
+    "addressMalayalam": "മഞ്ചേരി, മലപ്പുറം, കേരള",
+    "mapEmbed": "https://maps.google.com/maps?q=Jayasree+Auditorium+Manjeri+Kerala&output=embed",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jayasree+Auditorium+Manjeri+Malappuram+Kerala",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Jayasree+Auditorium,+Manjeri,+Malappuram,+Kerala"
   },
   "timeline": [
     {

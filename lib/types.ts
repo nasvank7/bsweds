@@ -6,8 +6,11 @@ export interface WeddingConfig {
     groom: CoupleInfo;
   };
   events: Event[];
+  eventsBride?: Event[];
   weddingDate: string;
+  weddingDateBride?: string;
   venue: Venue;
+  venueBride?: Venue;
   timeline: TimelineItem[];
   family: Family;
   gallery: string[];

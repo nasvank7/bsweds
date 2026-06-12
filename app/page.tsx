@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import weddingConfig from '@/config/wedding.json';
 import { WeddingConfig } from '@/lib/types';
+import { isBrideSide } from '@/lib/perspective';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
 import SplashScreen from '@/components/SplashScreen';
@@ -55,7 +56,7 @@ export default function Page() {
             <QuranVerseSection />
             <BrideGroomSection config={config} />
             <EventDetailsSection config={config} />
-            <CountdownTimer weddingDate={config.weddingDate} />
+            <CountdownTimer weddingDate={(isBrideSide && config.weddingDateBride) ? config.weddingDateBride : config.weddingDate} />
             <TimelineSection config={config} />
             <VenueSection config={config} />
             <FamilySection config={config} />

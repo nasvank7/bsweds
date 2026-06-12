@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { WeddingConfig } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
 import SectionHeader from '../ui/SectionHeader';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -12,7 +13,9 @@ export default function VenueSection({ config }: Props) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const { t, lang } = useLanguage();
   const ml = lang === 'ml';
-  const { venue } = config;
+  const venue = (isBrideSide && config.venueBride) ? config.venueBride : config.venue;
+  const activeEvents = (isBrideSide && config.eventsBride) ? config.eventsBride : config.events;
+  const reception = activeEvents.find((e) => e.id === 'reception');
   const venueName = ml ? (venue.nameMalayalam || venue.name) : venue.name;
   const venueAddr = ml ? (venue.addressMalayalam || venue.address) : venue.address;
 
@@ -104,7 +107,7 @@ export default function VenueSection({ config }: Props) {
                     {ml ? 'സമയം' : 'Time'}
                   </p>
                   <p className={`text-sm font-semibold mt-0.5 ${ml ? 'font-malayalam' : 'font-poppins'}`} style={{ color: '#3C1020' }}>
-                    5:00 PM
+                    {reception?.time ?? '5:00 PM'}
                   </p>
                 </div>
               </div>
