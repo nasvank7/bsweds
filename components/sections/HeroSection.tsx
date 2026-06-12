@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import FloatingLanterns from '../ui/FloatingLanterns';
 import { WeddingConfig } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -34,6 +35,11 @@ export default function HeroSection({ config }: Props) {
   const brideName = ml ? (couple.bride.nameMalayalam || couple.bride.name) : couple.bride.name;
   const eventDate = ml ? (reception?.dateMalayalam || reception?.date) : reception?.date;
   const venueName = ml ? (venue.nameMalayalam || venue.name) : venue.name;
+
+  const primaryName      = isBrideSide ? brideName  : groomName;
+  const primaryArabic    = isBrideSide ? couple.bride.nameArabic : couple.groom.nameArabic;
+  const secondaryName    = isBrideSide ? groomName  : brideName;
+  const secondaryArabic  = isBrideSide ? couple.groom.nameArabic : couple.bride.nameArabic;
 
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -188,15 +194,15 @@ export default function HeroSection({ config }: Props) {
           <div className="h-px w-8" style={{ background: 'rgba(212,175,55,0.5)' }} />
         </motion.div>
 
-        {/* Groom name */}
+        {/* Primary name */}
         <motion.div className="mb-3"
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.7 }}>
           <h1 className={`font-bold leading-none ${ml ? 'font-malayalam' : 'font-playfair'}`}
             style={{ fontSize: 'clamp(2.4rem, 10vw, 6.5rem)', color: '#FFFDF7', textShadow: '0 4px 32px rgba(10,3,6,0.6)', lineHeight: 1.1 }}>
-            {groomName}
+            {primaryName}
           </h1>
           <p className="font-amiri text-xl mt-2" style={{ color: 'rgba(232,180,184,0.6)' }} dir="rtl">
-            {couple.groom.nameArabic}
+            {primaryArabic}
           </p>
         </motion.div>
 
@@ -220,15 +226,15 @@ export default function HeroSection({ config }: Props) {
           <div className="h-px w-10 md:w-16" style={{ background: 'linear-gradient(to left, transparent, rgba(212,175,55,0.5))' }} />
         </motion.div>
 
-        {/* Bride name */}
+        {/* Secondary name */}
         <motion.div className="mb-10"
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.05 }}>
           <h1 className={`font-bold leading-none ${ml ? 'font-malayalam' : 'font-playfair'}`}
             style={{ fontSize: 'clamp(2.4rem, 10vw, 6.5rem)', color: '#FFFDF7', textShadow: '0 4px 32px rgba(10,3,6,0.6)', lineHeight: 1.1 }}>
-            {brideName}
+            {secondaryName}
           </h1>
           <p className="font-amiri text-xl mt-2" style={{ color: 'rgba(232,180,184,0.6)' }} dir="rtl">
-            {couple.bride.nameArabic}
+            {secondaryArabic}
           </p>
         </motion.div>
 

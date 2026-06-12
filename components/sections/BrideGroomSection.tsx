@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { WeddingConfig, CoupleInfo } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
 import SectionHeader from '../ui/SectionHeader';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -112,7 +113,7 @@ function PersonCard({ person, role, delay }: { person: CoupleInfo; role: 'groom'
 }
 
 export default function BrideGroomSection({ config }: Props) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ref] = useInView({ triggerOnce: true, threshold: 0.1 });
   const { t } = useLanguage();
 
   return (
@@ -141,7 +142,7 @@ export default function BrideGroomSection({ config }: Props) {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto relative">
-          <PersonCard person={config.couple.groom} role="groom" delay={0.2} />
+          <PersonCard person={isBrideSide ? config.couple.bride : config.couple.groom} role={isBrideSide ? 'bride' : 'groom'} delay={0.2} />
 
           {/* Center connector — desktop */}
           <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3 z-10">
@@ -163,7 +164,7 @@ export default function BrideGroomSection({ config }: Props) {
             <div className="h-px flex-1" style={{ background: 'rgba(212,175,55,0.3)' }} />
           </div>
 
-          <PersonCard person={config.couple.bride} role="bride" delay={0.4} />
+          <PersonCard person={isBrideSide ? config.couple.groom : config.couple.bride} role={isBrideSide ? 'groom' : 'bride'} delay={0.4} />
         </div>
       </div>
     </section>

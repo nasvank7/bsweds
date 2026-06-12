@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { WeddingConfig, FamilyMember } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
 import SectionHeader from '../ui/SectionHeader';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -78,7 +79,7 @@ function FamilyCard({ member, side, name, delay }: { member: FamilyMember; side:
         <div className="space-y-5">
           {rows.map((row) => (
             <div key={row.label} className="flex items-start gap-4">
-              <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
                 style={{ background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.2)' }}>
                 {row.icon}
               </div>
@@ -129,8 +130,8 @@ export default function FamilySection({ config }: Props) {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <FamilyCard member={config.family.groom} side="groom" name={groomName} delay={0.3} />
-          <FamilyCard member={config.family.bride} side="bride" name={brideName} delay={0.5} />
+          <FamilyCard member={isBrideSide ? config.family.bride : config.family.groom} side={isBrideSide ? 'bride' : 'groom'} name={isBrideSide ? brideName : groomName} delay={0.3} />
+          <FamilyCard member={isBrideSide ? config.family.groom : config.family.bride} side={isBrideSide ? 'groom' : 'bride'} name={isBrideSide ? groomName : brideName} delay={0.5} />
         </div>
       </div>
     </section>

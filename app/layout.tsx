@@ -1,6 +1,14 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import weddingConfig from '@/config/wedding.json';
+import { isBrideSide } from '@/lib/perspective';
+
+const { groom, bride } = weddingConfig.couple;
+const primary   = isBrideSide ? bride.name   : groom.name;
+const secondary = isBrideSide ? groom.name   : bride.name;
+
+const metaTitle       = `${primary} & ${secondary} | Wedding Reception`;
+const metaDescription = `You are cordially invited to the wedding reception of ${primary} and ${secondary} on July 5, 2026`;
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -14,22 +22,19 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
   ),
-  title: weddingConfig.meta.title,
-  description: weddingConfig.meta.description,
-  icons: {
-    icon: '/logo.jpeg',
-    apple: '/logo.jpeg',
-  },
+  title: metaTitle,
+  description: metaDescription,
+  icons: { icon: '/logo.jpeg', apple: '/logo.jpeg' },
   openGraph: {
-    title: weddingConfig.meta.title,
-    description: weddingConfig.meta.description,
+    title: metaTitle,
+    description: metaDescription,
     images: [{ url: '/logo.jpeg', width: 1066, height: 1600 }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: weddingConfig.meta.title,
-    description: weddingConfig.meta.description,
+    title: metaTitle,
+    description: metaDescription,
     images: ['/logo.jpeg'],
   },
   manifest: '/manifest.json',

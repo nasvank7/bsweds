@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { WeddingConfig } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -14,8 +15,10 @@ export default function FooterSection({ config }: Props) {
   const fontClass = ml ? 'font-malayalam' : 'font-poppins';
   const { couple } = config;
 
-  const groomName = ml ? (couple.groom.nameMalayalam || couple.groom.name) : couple.groom.name;
-  const brideName = ml ? (couple.bride.nameMalayalam || couple.bride.name) : couple.bride.name;
+  const groomName    = ml ? (couple.groom.nameMalayalam || couple.groom.name) : couple.groom.name;
+  const brideName    = ml ? (couple.bride.nameMalayalam || couple.bride.name) : couple.bride.name;
+  const primaryName  = isBrideSide ? brideName : groomName;
+  const secondaryName = isBrideSide ? groomName : brideName;
 
   return (
     <footer className="relative overflow-hidden"
@@ -73,10 +76,10 @@ export default function FooterSection({ config }: Props) {
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.5 }}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-0">
             <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
-              style={{ color: '#FEF8F5', lineHeight: 1.15 }}>{groomName}</h2>
+              style={{ color: '#FEF8F5', lineHeight: 1.15 }}>{primaryName}</h2>
             <span className="font-playfair text-xl sm:text-2xl sm:mx-4 my-1 sm:my-0" style={{ color: '#D4AF37' }}>♥</span>
             <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-snug ${ml ? 'font-malayalam' : 'font-playfair'}`}
-              style={{ color: '#FEF8F5', lineHeight: 1.15 }}>{brideName}</h2>
+              style={{ color: '#FEF8F5', lineHeight: 1.15 }}>{secondaryName}</h2>
           </div>
         </motion.div>
 
@@ -102,7 +105,7 @@ export default function FooterSection({ config }: Props) {
             </svg>
           </div>
           <p className={`text-xs ${fontClass}`} style={{ color: 'rgba(255,253,247,0.4)' }}>
-            {t.footer.madeWith} {groomName} & {brideName} — {t.footer.year}
+            {t.footer.madeWith} {primaryName} & {secondaryName} — {t.footer.year}
           </p>
         </motion.div>
       </div>
