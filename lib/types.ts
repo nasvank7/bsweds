@@ -12,6 +12,7 @@ export interface WeddingConfig {
   venue: Venue;
   venueBride?: Venue;
   timeline: TimelineItem[];
+  timelineBride?: TimelineItem[];
   family: Family;
   gallery: string[];
   gift: Gift;

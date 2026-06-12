@@ -27,10 +27,16 @@ export default function SplashScreen({ onOpen }: Props) {
   const { t, lang } = useLanguage();
   const ml = lang === 'ml';
 
-  const groomName    = ml ? (weddingConfig.couple.groom.nameMalayalam || weddingConfig.couple.groom.name) : weddingConfig.couple.groom.name;
-  const brideName    = ml ? (weddingConfig.couple.bride.nameMalayalam || weddingConfig.couple.bride.name) : weddingConfig.couple.bride.name;
-  const primaryName  = isBrideSide ? brideName : groomName;
+  const groomName     = ml ? (weddingConfig.couple.groom.nameMalayalam || weddingConfig.couple.groom.name) : weddingConfig.couple.groom.name;
+  const brideName     = ml ? (weddingConfig.couple.bride.nameMalayalam || weddingConfig.couple.bride.name) : weddingConfig.couple.bride.name;
+  const primaryName   = isBrideSide ? brideName : groomName;
   const secondaryName = isBrideSide ? groomName : brideName;
+
+  const activeEvents  = (isBrideSide && weddingConfig.eventsBride) ? weddingConfig.eventsBride : weddingConfig.events;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const reception     = (activeEvents as any[]).find((e: { id: string }) => e.id === 'reception');
+  const receptionTime = reception?.time ?? '5:00 PM';
+  const receptionDate = ml ? (reception?.dateMalayalam || reception?.date) : reception?.date;
 
   useEffect(() => {
     const id = setTimeout(onOpen, 4600);
@@ -291,7 +297,7 @@ export default function SplashScreen({ onOpen }: Props) {
         <motion.p className={`mt-3 sm:mt-4 ${ml ? 'font-malayalam text-xs sm:text-sm' : 'font-poppins text-[10px] sm:text-xs'}`}
           style={{ color: 'rgba(60,20,10,0.5)' }}
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.1 }}>
-          {ml ? 'ഞായർ, ജൂലൈ 5, 2026 · 5:00 PM' : 'Sunday, 5th July 2026 · 5:00 PM'}
+          {`${receptionDate} · ${receptionTime}`}
         </motion.p>
       </div>
 

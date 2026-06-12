@@ -115,6 +115,41 @@
       "icon": "celebration"
     }
   ],
+  "timelineBride": [
+    {
+      "id": "engagement",
+      "title": "Engagement",
+      "titleMalayalam": "നിശ്ചയതാംബൂലം",
+      "titleArabic": "الخطوبة",
+      "date": "2025",
+      "dateMalayalam": "2025",
+      "description": "The beautiful beginning of our journey together",
+      "descriptionMalayalam": "ഞങ്ങളുടെ യാത്രയുടെ മനോഹരമായ തുടക്കം",
+      "icon": "ring"
+    },
+    {
+      "id": "nikah",
+      "title": "Nikah Ceremony",
+      "titleMalayalam": "നിക്കാഹ് ചടങ്ങ്",
+      "titleArabic": "عقد النكاح",
+      "date": "July 13, 2025",
+      "dateMalayalam": "ജൂലൈ 13, 2025",
+      "description": "Our blessed Nikah was solemnized on July 13, 2025, Alhamdulillah",
+      "descriptionMalayalam": "ഞങ്ങളുടെ നിക്കാഹ് 2025 ജൂലൈ 13-ന് നടന്നു, അൽഹംദുലില്ലാഹ്",
+      "icon": "mosque"
+    },
+    {
+      "id": "reception",
+      "title": "Wedding Reception",
+      "titleMalayalam": "വിവാഹ സ്വീകരണം",
+      "titleArabic": "وليمة العرس",
+      "date": "July 5, 2026 – 11:00 AM",
+      "dateMalayalam": "ജൂലൈ 5, 2026 – 11:00 AM",
+      "description": "Celebrate with family and friends at Jayasree Auditorium, Manjeri",
+      "descriptionMalayalam": "കുടുംബവും സുഹൃത്തുക്കളും ചേർന്ന് ആഘോഷിക്കൂ",
+      "icon": "celebration"
+    }
+  ],
   "family": {
     "groom": {
       "father": "Abdurahiman K. (Kanniyan H)",

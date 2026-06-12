@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { WeddingConfig } from '@/lib/types';
 import { useLanguage } from '@/lib/LanguageContext';
+import { isBrideSide } from '@/lib/perspective';
 
 interface Props { config: WeddingConfig }
 
@@ -113,6 +114,7 @@ export default function TimelineSection({ config }: Props) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const { t, lang } = useLanguage();
   const ml = lang === 'ml';
+  const activeTimeline = (isBrideSide && config.timelineBride) ? config.timelineBride : config.timeline;
 
   return (
     <section id="timeline" className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
@@ -146,8 +148,8 @@ export default function TimelineSection({ config }: Props) {
         </div>
 
         <div>
-          {config.timeline.map((item, i) => (
-            <TimelineItem key={item.id} item={item} index={i} isLast={i === config.timeline.length - 1} />
+          {activeTimeline.map((item, i) => (
+            <TimelineItem key={item.id} item={item} index={i} isLast={i === activeTimeline.length - 1} />
           ))}
         </div>
       </div>
