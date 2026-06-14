@@ -37,6 +37,7 @@ export default function HeroSection({ config }: Props) {
   const brideName = ml ? (couple.bride.nameMalayalam || couple.bride.name) : couple.bride.name;
   const eventDate = ml ? (reception?.dateMalayalam || reception?.date) : reception?.date;
   const venueName = ml ? (venue.nameMalayalam || venue.name) : venue.name;
+  const venueAddr = ml ? (venue.addressMalayalam || venue.address) : venue.address;
 
   const primaryName      = isBrideSide ? brideName  : groomName;
   const primaryArabic    = isBrideSide ? couple.bride.nameArabic : couple.groom.nameArabic;
@@ -258,8 +259,12 @@ export default function HeroSection({ config }: Props) {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E8B4B8" strokeWidth="2.2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
             </svg>
-            <span className={`text-sm ${ml ? 'font-malayalam' : 'font-poppins'}`} style={{ color: 'rgba(255,253,247,0.7)' }}>
+            <span className={`text-sm ${ml ? 'font-malayalam' : 'font-poppins'}`} style={{ color: 'rgba(255,253,247,0.85)' }}>
               {venueName}
+            </span>
+            <span className="text-xs" style={{ color: 'rgba(255,253,247,0.5)' }}>·</span>
+            <span className={`text-xs ${ml ? 'font-malayalam' : 'font-poppins'}`} style={{ color: 'rgba(255,253,247,0.65)' }}>
+              {venueAddr}
             </span>
           </div>
         </motion.div>

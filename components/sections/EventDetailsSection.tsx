@@ -85,29 +85,37 @@ function EventCard({ event, index }: { event: WeddingConfig['events'][0]; index:
         <div className="h-px mb-6" style={{ background: 'rgba(212,175,55,0.15)' }} />
 
         {/* Details */}
-        <div className="space-y-4">
+        <div className="space-y-5">
           {[
             {
-              icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
+              icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
               value: date,
+              color: 'rgba(255,253,247,0.92)',
+              weight: 'font-medium',
             },
             {
-              icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
+              icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
               value: event.time,
+              color: 'rgba(255,253,247,0.92)',
+              weight: 'font-medium',
             },
             {
-              icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>,
+              icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>,
               value: venue,
+              color: 'rgba(255,253,247,0.88)',
+              weight: 'font-semibold',
             },
             {
-              icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(212,175,55,0.5)" strokeWidth="1.5"><path d="M3 12h18M3 6h18M3 18h12"/></svg>,
+              icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(212,175,55,0.75)" strokeWidth="1.8"><path d="M3 12h18M3 6h18M3 18h12"/></svg>,
               value: address,
+              color: 'rgba(255,253,247,0.72)',
+              weight: 'font-normal',
             },
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-3">
               <div className="mt-0.5 shrink-0">{item.icon}</div>
-              <p className={`text-sm leading-relaxed ${ml ? 'font-malayalam' : 'font-poppins'}`}
-                style={{ color: i < 2 ? 'rgba(255,253,247,0.9)' : 'rgba(255,253,247,0.55)' }}>
+              <p className={`text-sm md:text-base leading-relaxed ${item.weight} ${ml ? 'font-malayalam' : 'font-poppins'}`}
+                style={{ color: item.color }}>
                 {item.value}
               </p>
             </div>
