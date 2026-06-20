@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@300;400;500;600;700&family=Manjari:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@300;400;500;600;700&family=Manjari:wght@100;400;700&display=swap');
 
 @import "tailwindcss";
 
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Croissant One', cursive;
   background-color: #FEF8F5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,10 +46,10 @@ section {
   html { font-size: 15px; }
 }
 
-.font-cormorant { font-family: 'Dancing Script', cursive; }
-.font-dancing   { font-family: 'Dancing Script', cursive; }
-.font-playfair  { font-family: 'Dancing Script', cursive; }
-.font-poppins   { font-family: 'Dancing Script', cursive; }
+.font-cormorant { font-family: 'Croissant One', cursive; }
+.font-dancing   { font-family: 'Croissant One', cursive; }
+.font-playfair  { font-family: 'Croissant One', cursive; }
+.font-poppins   { font-family: 'Croissant One', cursive; }
 .font-amiri     { font-family: 'Amiri', 'Noto Naskh Arabic', serif; }
 .font-naskh     { font-family: 'Noto Naskh Arabic', serif; }
 .font-malayalam { font-family: 'Manjari', 'Noto Sans Malayalam', system-ui, sans-serif; word-break: break-word; }

@@ -14,12 +14,11 @@ import MusicPlayer from '@/components/ui/MusicPlayer';
 
 import HeroSection from '@/components/sections/HeroSection';
 import QuranVerseSection from '@/components/sections/QuranVerseSection';
-import BrideGroomSection from '@/components/sections/BrideGroomSection';
 import EventDetailsSection from '@/components/sections/EventDetailsSection';
-import CountdownTimer from '@/components/sections/CountdownTimer';
-import TimelineSection from '@/components/sections/TimelineSection';
 import VenueSection from '@/components/sections/VenueSection';
-import FamilySection from '@/components/sections/FamilySection';
+import CountdownTimer from '@/components/sections/CountdownTimer';
+import BrideGroomSection from '@/components/sections/BrideGroomSection';
+import TimelineSection from '@/components/sections/TimelineSection';
 import FooterSection from '@/components/sections/FooterSection';
 
 const config = weddingConfig as WeddingConfig;
@@ -54,12 +53,11 @@ export default function Page() {
           <main>
             <HeroSection config={config} />
             <QuranVerseSection />
-            <BrideGroomSection config={config} />
-            <EventDetailsSection config={config} />
-            <CountdownTimer weddingDate={(isBrideSide && config.weddingDateBride) ? config.weddingDateBride : config.weddingDate} />
-            <TimelineSection config={config} />
+            {/* <EventDetailsSection config={config} /> */}
             <VenueSection config={config} />
-            <FamilySection config={config} />
+            <CountdownTimer weddingDate={(isBrideSide && config.weddingDateBride) ? config.weddingDateBride : config.weddingDate} />
+            <BrideGroomSection config={config} />
+            <TimelineSection config={config} />
             <FooterSection config={config} />
           </main>
         </LanguageProvider>
