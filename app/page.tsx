@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import weddingConfig from '@/config/wedding.json';
 import { WeddingConfig } from '@/lib/types';
-import { isBrideSide } from '@/lib/perspective';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
 import SplashScreen from '@/components/SplashScreen';
@@ -13,13 +12,7 @@ import ScrollProgress from '@/components/ui/ScrollProgress';
 import MusicPlayer from '@/components/ui/MusicPlayer';
 
 import HeroSection from '@/components/sections/HeroSection';
-import QuranVerseSection from '@/components/sections/QuranVerseSection';
-import EventDetailsSection from '@/components/sections/EventDetailsSection';
-import VenueSection from '@/components/sections/VenueSection';
-import CountdownTimer from '@/components/sections/CountdownTimer';
-import BrideGroomSection from '@/components/sections/BrideGroomSection';
-import TimelineSection from '@/components/sections/TimelineSection';
-import FooterSection from '@/components/sections/FooterSection';
+import OurStorySection from '@/components/sections/OurStorySection';
 
 const config = weddingConfig as WeddingConfig;
 
@@ -52,13 +45,7 @@ export default function Page() {
           {/* {config.music.enabled && <MusicPlayer src={config.music.src} />} */}
           <main>
             <HeroSection config={config} />
-            <QuranVerseSection />
-            {/* <EventDetailsSection config={config} /> */}
-            <VenueSection config={config} />
-            <CountdownTimer weddingDate={(isBrideSide && config.weddingDateBride) ? config.weddingDateBride : config.weddingDate} />
-            <BrideGroomSection config={config} />
-            <TimelineSection config={config} />
-            <FooterSection config={config} />
+            <OurStorySection config={config} />
           </main>
         </LanguageProvider>
       )}
